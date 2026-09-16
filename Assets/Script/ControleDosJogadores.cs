@@ -164,7 +164,7 @@ public class PlayersControler : MonoBehaviour
         // .isPressed → pergunta se está pressionada agora
         // RESUMO: verifica se o jogador está segurando W
         {
-            transform.Translate(Vector2.up * velocidade * Time.deltaTime);
+            
             // transform.Translate(...) → move o objeto na direção/distância informada
             // Vector2.up → atalho pra "pra cima" (0, 1)
             // * velocidade → multiplica pela força guardada em velocidade
