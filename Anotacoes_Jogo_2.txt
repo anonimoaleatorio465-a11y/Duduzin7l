@@ -1,0 +1,56 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+
+public class ControleDosJogadores : MonoBehaviour
+{
+
+    public float velocidade = 5f ;
+
+    public bool jogador1 = true ;
+    
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start ()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update ()
+    {
+        if (jogador1 == true)
+        {
+            MoverJogador1 ();
+        }
+        else
+        {
+            MoverJogador2 ();
+        }
+        
+    }
+
+    private void Moverjogador1 ()
+    {
+        if (Keyboard.current.wKey.isPressed)
+        {
+            transform.Translate (Vector2.up * velocidade * Time.deltaTime);
+        }
+        if (Keyboard.current.sKey.isPressed)
+        {
+            transform.Translate (Vector2.down * velocidade * Time.deltaTime);
+        }
+    }
+
+    private void MoverJogador2 ();
+    {
+        if (Keyboard.current.upArrowKey.isPressed)
+        {
+            transform.Translate (Vector2.up * velocidade * Time.deltaTime) ;
+        }
+        if (Keyboard.current.downArrowKey.isPressed)
+        {
+            Transform.Translate (Vector2.down * velocidade * Time.deltaTime);
+        }
+    }
+}
